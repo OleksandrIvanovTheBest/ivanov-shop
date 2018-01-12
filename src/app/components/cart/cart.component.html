@@ -1,0 +1,4 @@
+<div class="cart" *ngIf="!isEmpty">
+  <h2>Cart:</h2>
+  <app-product *ngFor="let product of productsInCart" [product]="product"></app-product>
+</div>

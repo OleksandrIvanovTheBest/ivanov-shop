@@ -1,0 +1,16 @@
+.element-content {
+    width: 20%; 
+    float: left;
+    margin: 20px;
+}
+
+.right-top-icon {
+    position: relative;
+    float: right;
+    width: 300px;
+}
+
+.cart-component {
+    float: left;
+    margin-left: 20%;
+}

@@ -1,0 +1,11 @@
+<div class="product-info">
+  <ul>
+    <li>Name: {{product.name}}</li>
+    <li>Description: {{product.description}}</li>
+    <li>Price: {{product.price}}</li>
+    <li>Category: {{product.category}}</li>
+    <li>IsAvailable: {{product.isAvailable}}</li>
+  </ul>
+  <button *ngIf="product.isAvailable" (click)="addToCart(product)">Buy</button>
+</div>
+
