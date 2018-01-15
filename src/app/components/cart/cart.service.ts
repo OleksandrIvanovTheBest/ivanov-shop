@@ -2,7 +2,7 @@ import { Injectable} from '@angular/core';
 
 import { Subject } from 'rxjs/Subject';
 
-import { Product } from '../models/product.model';
+import { Product } from '../product-list';
 
 @Injectable()
 export class CartService {

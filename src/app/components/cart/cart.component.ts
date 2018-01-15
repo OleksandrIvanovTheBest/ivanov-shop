@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { Subscription } from 'rxjs/Subscription';
 
-import { Product } from '../../models/product.model';
-import { CartService} from '../../services';
+import { Product } from '../product-list';
+import { CartService} from './cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -25,9 +25,10 @@ export class CartComponent implements OnInit {
     this.isEmpty = true;
     this.sub = this.cartService.channel$.subscribe(
       products => {
-          this.productsInCart = products; this.isEmpty = products.length === 0; console.log(this.isEmpty);
-      }
-    );
+          this.productsInCart = products;
+          this.isEmpty = products.length === 0;
+          console.log(this.isEmpty);
+      });
   }
 
 }

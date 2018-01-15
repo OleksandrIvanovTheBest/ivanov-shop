@@ -1,13 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
-import { ProductComponent } from './components/product/product.component';
-import { ProductService, CartService } from './services';
+import { ProductComponent, ProductService } from './components/product-list';
 import { ProductListComponent } from './components/product-list/product-list.component';
-import { CartComponent } from './components/cart/cart.component';
-
+import { CartService, CartComponent } from './components/cart';
 
 @NgModule({
   declarations: [
