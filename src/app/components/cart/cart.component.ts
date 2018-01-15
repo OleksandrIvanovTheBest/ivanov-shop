@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { Subscription } from 'rxjs/Subscription';
 
@@ -10,7 +10,7 @@ import { CartService} from './cart.service';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent implements OnInit {
+export class CartComponent implements OnInit, OnDestroy {
   private sub: Subscription;
 
   productsInCart: Array<Product>;
@@ -30,5 +30,9 @@ export class CartComponent implements OnInit {
           console.log(this.isEmpty);
       });
   }
+
+    ngOnDestroy() {
+      this.sub.unsubscribe();
+    }
 
 }
