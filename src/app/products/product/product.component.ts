@@ -11,9 +11,15 @@ export class ProductComponent implements OnInit {
   @Input() product: Product;
   @Output() clickAdd: EventEmitter<Product> = new EventEmitter<Product>();
 
+  color: string;
+
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (!this.product.isAvailable) {
+      this.color = 'brown';
+    }
+  }
 
   addToCart(product: Product) {
     console.log(this.product.name + ' was added to cart');

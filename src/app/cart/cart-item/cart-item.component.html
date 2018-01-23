@@ -1,0 +1,11 @@
+<div class="product-info">
+  <ul>
+    <li>Name: {{item.name}}</li>
+    <li>Description: {{item.description}}</li>
+    <li>Price: {{item.price}}</li>
+    <li>Category: {{item.category}}</li>
+    <li>Quantity: {{item.quantity}}</li>
+  </ul>
+  <input #quantity (change)="changeItemsQuantity(quantity)" id="number-of-curr-item" type="number" min="1" max={{item.inStock}} step="1" value="1">
+  <button (click)="removeFromCart()">Remove</button> 
+</div>

@@ -1,11 +1,12 @@
-<div class="product-info">
+<div class="product-info" [ngStyle] ="{'background-color': color}">
   <ul>
     <li>Name: {{product.name}}</li>
     <li>Description: {{product.description}}</li>
     <li>Price: {{product.price}}</li>
     <li>Category: {{product.category}}</li>
+    <li>In Stock: {{product.inStock}}</li>
     <li>IsAvailable: {{product.isAvailable}}</li>
   </ul>
-  <button *ngIf="product.isAvailable" (click)="addToCart(product)">Buy</button>
+  <button *ngIf="product.isAvailable" (click)="addToCart(product)" >Buy</button>
 </div>
 

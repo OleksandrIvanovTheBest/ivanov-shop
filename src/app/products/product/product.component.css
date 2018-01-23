@@ -6,3 +6,7 @@
     border-color: black;
     position: relative;
 }  
+
+.product-info.grey {
+    background-color: grey;
+}

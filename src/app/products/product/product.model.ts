@@ -6,6 +6,13 @@ export class Product {
         public description: string,
         public price: number,
         public category: ProductCategory,
-        public isAvailable: boolean
-    ) {}
+        public inStock: number,
+        public isAvailable?: boolean
+    ) {
+        if (inStock > 0) {
+            this.isAvailable = true;
+        } else {
+            this.isAvailable = false;
+        }
+    }
 }

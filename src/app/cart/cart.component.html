@@ -1,0 +1,11 @@
+<div class="cart" *ngIf="!isEmpty">
+  <h2>Cart:</h2>
+  <h3>Items in cart: {{itemsInCart.length}}</h3>
+  <h3>Total price: {{totalPrice}}</h3>
+  <app-cart-item 
+    *ngFor="let item of itemsInCart" 
+    [item]="item"
+    (removeItem)="onRemoveFromCart(item)"
+    (changeQuantity)="onChangeQuantity(item)">
+  </app-cart-item>
+</div>
